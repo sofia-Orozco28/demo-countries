@@ -7,6 +7,6 @@ import lombok.Setter;
 @Setter
 public class CityModel {
 
-	private String cityName;
+	private String nameCity;
 	private String postalCode;
 }
