@@ -14,8 +14,8 @@ public class GetCountryService  implements IgetCountryService{
 
 	@Autowired
 	private RestTemplate restTemplate;
-	@Value("${urlCountries}")
-	private String urlContries;
+	@Value("${countries}")
+	private String countries;
 	Gson gson = new Gson();
 	
 	@Override
@@ -23,14 +23,14 @@ public class GetCountryService  implements IgetCountryService{
 		
 		CountryRSModel countryResponse = new CountryRSModel();
 		try {
-			
-			String respEntity= restTemplate.exchange(urlContries, HttpMethod.GET, null,String.class).getBody();
-			countryResponse = gson.fromJson(respEntity, CountryRSModel.class);
+			System.out.println("COunTRiES");
+			System.out.println(countries);
+			countryResponse = gson.fromJson(countries, CountryRSModel.class);
 			System.out.println("RESPONSE");
 			System.out.println(gson.toJson(countryResponse));
 		}
 		catch (Exception e) {
-			throw new Exception(e.getMessage(), e.getCause());
+			e.printStackTrace();
 		}
 	
 		return countryResponse;

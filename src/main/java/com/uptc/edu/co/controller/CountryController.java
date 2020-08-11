@@ -20,7 +20,7 @@ public class CountryController {
 	@Autowired
 	private IgetCountryService getCountriesService;
 	
-	@GetMapping(path = "/infoCountry")
+	@GetMapping(path = "/info-country")
 	public ResponseEntity<Object> getCountries(@RequestParam (name = "country", required = true) String country)
 	throws Exception{
 		
