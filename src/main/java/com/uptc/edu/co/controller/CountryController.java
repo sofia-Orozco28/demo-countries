@@ -14,13 +14,13 @@ import com.uptc.edu.co.service.IgetCountryService;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping(path = "/country/")
+@RequestMapping(path = "/country/service/")
 public class CountryController {
 	
 	@Autowired
 	private IgetCountryService getCountriesService;
 	
-	@GetMapping(path = "/info-country")
+	@GetMapping(path = "/info")
 	public ResponseEntity<Object> getCountries(@RequestParam (name = "country", required = true) String country)
 	throws Exception{
 		
