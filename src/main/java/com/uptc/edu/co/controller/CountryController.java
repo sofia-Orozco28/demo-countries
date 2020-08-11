@@ -14,7 +14,7 @@ import com.uptc.edu.co.service.IgetCountryService;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping(path = "/")
+@RequestMapping(path = "/country/")
 public class CountryController {
 	
 	@Autowired
